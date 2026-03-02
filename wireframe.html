@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - Татьяна Ильина</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --gray-light: #f0f0f0;
+            --gray-mid: #cccccc;
+            --gray-dark: #333333;
+            --border: #dddddd;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        section {
+            padding: var(--spacing-lg) 0;
+            border-bottom: 2px dashed var(--border);
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: var(--spacing-sm); line-height: 1.2; }
+        h2 { font-size: 2rem; margin-bottom: var(--spacing-md); text-align: center; }
+        h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        p { color: var(--text-muted); margin-bottom: var(--spacing-sm); }
+
+        /* Wireframe Elements */
+        .wire-img {
+            background-color: var(--gray-light);
+            border: 2px solid var(--gray-mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-muted);
+            font-weight: bold;
+            padding: var(--spacing-md);
+            min-height: 300px;
+        }
+
+        .wire-btn {
+            display: inline-block;
+            background-color: var(--gray-dark);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .wire-btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--gray-dark);
+        }
+
+        .wire-icon {
+            width: 64px;
+            height: 64px;
+            background-color: var(--gray-mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--gray-dark);
+            margin-bottom: 1rem;
+        }
+
+        .wire-box {
+            border: 2px solid var(--border);
+            padding: var(--spacing-md);
+            background-color: #fafafa;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid var(--gray-mid);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            background: var(--gray-light);
+        }
+
+        /* Layouts */
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .text-center { text-align: center; }
+
+        /* Header */
+        header {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 2px solid var(--border);
+        }
+        .nav-links span {
+            margin: 0 1rem;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container flex-between">
+            <div style="font-size: 1.5rem; font-weight: bold;">Татьяна Ильина</div>
+            <div class="nav-links">
+                <span>Методология</span>
+                <span>Кейсы</span>
+                <span>Цены</span>
+            </div>
+            <div class="wire-btn" style="margin: 0; padding: 0.5rem 1rem;">Кнопка: Бесплатная диагностика</div>
+        </div>
+    </header>
+
+    <!-- 1. HERO -->
+    <section>
+        <div class="container grid-2">
+            <div>
+                <div class="tag">Хватит терпеть тревогу</div>
+                <h1>Избавьтесь от тревоги и верните контроль над жизнью за 4 недели</h1>
+                <p>Структурная терапия без воды. Пошаговый план выхода из кризиса на первой бесплатной диагностике.</p>
+                <div style="margin-top: 2rem;">
+                    <div class="wire-btn">Кнопка: Записаться на диагностику</div>
+                    <div class="wire-btn wire-btn-outline">Кнопка: Пройти тест</div>
+                </div>
+            </div>
+            <div style="position: relative;">
+                <div class="wire-img" style="min-height: 500px;">
+                    Фото: Психолог Татьяна Ильина (крупный план, вызывающий доверие, светлый фон)
+                </div>
+                <div class="wire-box" style="position: absolute; bottom: -20px; left: 20px; right: 20px; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <strong>10+ лет опыта</strong><br>
+                    <span style="color: var(--text-muted)">Бережный кризис-менеджер</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. BENEFITS -->
+    <section>
+        <div class="container">
+            <div class="grid-3 text-center">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="wire-icon">Иконка</div>
+                    <h3>Четкий план действий</h3>
+                    <p>Пошаговый алгоритм выхода из кризиса уже на первой встрече.</p>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="wire-icon">Иконка</div>
+                    <h3>Видимый результат</h3>
+                    <p>Улучшение состояния и снижение тревоги за 4 сессии.</p>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="wire-icon">Иконка</div>
+                    <h3>Работа с причиной</h3>
+                    <p>Убираем корень проблемы, а не маскируем симптомы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. AGITATION -->
+    <section>
+        <div class="container">
+            <h2>Вы устали просыпаться с чувством тяжести?</h2>
+            <div class="grid-3">
+                <div class="wire-box">
+                    <div class="wire-icon" style="width: 40px; height: 40px;">Иконка</div>
+                    <p style="color: var(--text-main); font-weight: bold;">Отношения зашли в тупик и приносят только боль и разочарование.</p>
+                </div>
+                <div class="wire-box">
+                    <div class="wire-icon" style="width: 40px; height: 40px;">Иконка</div>
+                    <p style="color: var(--text-main); font-weight: bold;">Деньги утекают сквозь пальцы из-за внутренних блоков и страха заявить о себе.</p>
+                </div>
+                <div class="wire-box">
+                    <div class="wire-icon" style="width: 40px; height: 40px;">Иконка</div>
+                    <p style="color: var(--text-main); font-weight: bold;">Постоянная фоновая тревога не дает расслабиться даже в выходные.</p>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 2rem; font-size: 1.2rem;">Это не ваш характер. Это состояние, из которого <strong>есть выход</strong>.</p>
+        </div>
+    </section>
+
+    <!-- 3. QUIZ -->
+    <section style="background-color: var(--gray-light);">
+        <div class="container text-center">
+            <h2>Узнайте свой тип тревожности за 1 минуту</h2>
+            <p>Ответьте на 4 вопроса и получите персональную рекомендацию.</p>
+            
+            <div class="wire-box" style="max-width: 600px; margin: 2rem auto; text-align: left; background: white;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">Вопрос 1 из 4 (Прогресс-бар)</div>
+                <h3>Как часто вы прокручиваете негативные сценарии перед сном?</h3>
+                <div style="margin-top: 1.5rem;">
+                    <div class="wire-box" style="margin-bottom: 0.5rem; cursor: pointer;">Каждый день, не могу уснуть</div>
+                    <div class="wire-box" style="margin-bottom: 0.5rem; cursor: pointer;">Периодически, когда есть стресс</div>
+                    <div class="wire-box" style="margin-bottom: 0.5rem; cursor: pointer;">Редко, сплю нормально</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. STEPS -->
+    <section>
+        <div class="container">
+            <h2>Как мы решим вашу проблему</h2>
+            <p class="text-center" style="margin-bottom: 3rem;">Прозрачный путь из точки А (боль) в точку Б (результат).</p>
+            
+            <div class="grid-4">
+                <div class="wire-box">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--gray-mid);">01</div>
+                    <h3>Бесплатная диагностика</h3>
+                    <p>20 минут. Выявляем корень проблемы и определяем, смогу ли я вам помочь.</p>
+                </div>
+                <div class="wire-box">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--gray-mid);">02</div>
+                    <h3>План терапии</h3>
+                    <p>Подбираем метод (КПТ или Гештальт) под вашу конкретную задачу без лишней воды.</p>
+                </div>
+                <div class="wire-box">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--gray-mid);">03</div>
+                    <h3>Регулярные сессии</h3>
+                    <p>Глубокая работа, домашние задания и поддержка между встречами.</p>
+                </div>
+                <div class="wire-box">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--gray-mid);">04</div>
+                    <h3>Результат</h3>
+                    <p>Вы возвращаете себе спокойствие, уверенность и контроль над своей жизнью.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EXPERT -->
+    <section>
+        <div class="container grid-2">
+            <div class="wire-img" style="min-height: 400px;">
+                Фото: Портрет Татьяны Ильиной (профессиональное фото, открытая поза)
+            </div>
+            <div>
+                <h2>Татьяна Ильина</h2>
+                <p style="font-size: 1.2rem; color: var(--text-main); font-weight: bold;">Практикующий психолог-консультант. 52 года.</p>
+                <p>Я объединяю строгие академические знания и глубокий жизненный опыт. Моя задача — не просто выслушать вас, а дать рабочие инструменты для изменения жизни.</p>
+                <p>Я работаю как бережный, но структурный кризис-менеджер вашей психики. Мы не будем годами копаться в детстве, если вам нужна помощь прямо сейчас.</p>
+                
+                <ul style="list-style: none; margin-top: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">✓ Более 10 лет частной практики</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Регулярная супервизия и личная терапия</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Член ассоциации когнитивно-поведенческой психотерапии</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. METHODOLOGY -->
+    <section>
+        <div class="container">
+            <h2>Методы, которые дают результат</h2>
+            <p class="text-center" style="margin-bottom: 3rem;">Объясняю сложные термины простыми словами.</p>
+            
+            <div class="grid-2">
+                <div class="wire-box">
+                    <h3>КПТ</h3>
+                    <p>Когнитивно-поведенческая терапия. Золотой стандарт работы с тревогой и паникой.</p>
+                    <div style="background: var(--gray-light); padding: 1rem; margin-top: 1rem;">
+                        <strong>Результат:</strong> Вы научитесь отслеживать негативные мысли, останавливать панику и действовать рационально.
+                    </div>
+                </div>
+                <div class="wire-box">
+                    <h3>Гештальт-терапия</h3>
+                    <p>Глубокая работа с чувствами, обидами и личными границами.</p>
+                    <div style="background: var(--gray-light); padding: 1rem; margin-top: 1rem;">
+                        <strong>Результат:</strong> Вы проживете застрявшие эмоции, научитесь говорить «нет» и вернете легкость в тело.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CASES -->
+    <section style="background-color: var(--gray-dark); color: white;">
+        <div class="container">
+            <h2 style="color: white;">Истории моих клиентов</h2>
+            <div class="grid-2">
+                <div class="wire-box" style="background: transparent; border-color: var(--text-muted);">
+                    <h3 style="color: white;">Анна, 34 года</h3>
+                    <p style="color: var(--gray-mid); font-size: 0.8rem; text-transform: uppercase;">Точка А (С чем пришли):</p>
+                    <p style="color: white;">Пришла с ежедневными паническими атаками и страхом выходить из дома.</p>
+                    <hr style="border-color: var(--text-muted); margin: 1rem 0;">
+                    <p style="color: var(--gray-mid); font-size: 0.8rem; text-transform: uppercase;">Точка Б (Результат):</p>
+                    <p style="color: white; font-weight: bold;">Через 5 сессий КПТ паника ушла. Анна сменила работу на более высокооплачиваемую и начала путешествовать.</p>
+                </div>
+                <div class="wire-box" style="background: transparent; border-color: var(--text-muted);">
+                    <h3 style="color: white;">Михаил и Елена</h3>
+                    <p style="color: var(--gray-mid); font-size: 0.8rem; text-transform: uppercase;">Точка А (С чем пришли):</p>
+                    <p style="color: white;">Были на грани развода, постоянные скандалы из-за мелочей.</p>
+                    <hr style="border-color: var(--text-muted); margin: 1rem 0;">
+                    <p style="color: var(--gray-mid); font-size: 0.8rem; text-transform: uppercase;">Точка Б (Результат):</p>
+                    <p style="color: white; font-weight: bold;">За 2 месяца терапии заново научились слышать друг друга. Сохранили семью и вернули близость.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PRICING -->
+    <section>
+        <div class="container">
+            <h2>Стоимость работы</h2>
+            <p class="text-center" style="margin-bottom: 3rem;">Прозрачные цены без скрытых платежей.</p>
+            
+            <div class="grid-3">
+                <div class="wire-box text-center" style="display: flex; flex-direction: column;">
+                    <h3>Знакомство</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; margin: 1rem 0;">0 ₽</div>
+                    <ul style="list-style: none; text-align: left; margin-bottom: 2rem; flex-grow: 1;">
+                        <li>✓ 20 минут онлайн</li>
+                        <li>✓ Разбор вашей ситуации</li>
+                        <li>✓ Понимание, подходим ли мы друг другу</li>
+                    </ul>
+                    <div class="wire-btn wire-btn-outline" style="margin: 0; width: 100%;">Кнопка: Записаться</div>
+                </div>
+                
+                <div class="wire-box text-center" style="display: flex; flex-direction: column; border-color: var(--text-main); border-width: 4px; position: relative;">
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--text-main); color: white; padding: 2px 10px; font-size: 0.8rem;">САМЫЙ ЧАСТЫЙ ВЫБОР</div>
+                    <h3>Разовая сессия</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; margin: 1rem 0;">1 800 ₽</div>
+                    <ul style="list-style: none; text-align: left; margin-bottom: 2rem; flex-grow: 1;">
+                        <li>✓ 60 минут глубокой работы</li>
+                        <li>✓ Разбор конкретного запроса</li>
+                        <li>✓ Домашнее задание</li>
+                    </ul>
+                    <div class="wire-btn" style="margin: 0; width: 100%;">Кнопка: Выбрать</div>
+                </div>
+
+                <div class="wire-box text-center" style="display: flex; flex-direction: column;">
+                    <h3>Пакет 4 сессии</h3>
+                    <div style="font-size: 2.5rem; font-weight: bold; margin: 1rem 0;">6 800 ₽</div>
+                    <div style="font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem;">Выгода 400 ₽</div>
+                    <ul style="list-style: none; text-align: left; margin-bottom: 2rem; flex-grow: 1;">
+                        <li>✓ 4 встречи по 60 минут</li>
+                        <li>✓ Системная работа на результат</li>
+                        <li>✓ Поддержка в мессенджере</li>
+                    </ul>
+                    <div class="wire-btn wire-btn-outline" style="margin: 0; width: 100%;">Кнопка: Выбрать</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section>
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="wire-box" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <strong>Это конфиденциально?</strong>
+                    <span>+</span>
+                </div>
+                <div class="wire-box" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <strong>А онлайн-формат эффективен?</strong>
+                    <span>+</span>
+                </div>
+                <div class="wire-box" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <strong>Как проходит оплата?</strong>
+                    <span>+</span>
+                </div>
+                <div class="wire-box" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <strong>Сколько сессий мне понадобится?</strong>
+                    <span>+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. LEAD MAGNET -->
+    <section>
+        <div class="container text-center">
+            <div class="wire-box" style="max-width: 800px; margin: 0 auto; padding: 4rem 2rem;">
+                <div class="wire-icon" style="margin: 0 auto 1rem auto;">Иконка</div>
+                <h2>Пока не готовы к сессии?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Подпишитесь на мой Telegram-канал и заберите бесплатный гайд <strong>«5 техник экстренной самопомощи при тревоге»</strong>.</p>
+                <div class="wire-btn" style="margin: 0;">Кнопка: Скачать гайд в Telegram</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FORM -->
+    <section style="background-color: var(--gray-light);">
+        <div class="container text-center">
+            <h2>Сделайте первый шаг</h2>
+            <p style="margin-bottom: 3rem;">Оставьте заявку на бесплатную 20-минутную диагностику. Я свяжусь с вами в течение дня.</p>
+            
+            <div class="wire-box" style="max-width: 600px; margin: 0 auto; text-align: left; background: white;">
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Ваше имя</label>
+                    <div style="border: 1px solid var(--border); padding: 1rem; color: var(--text-muted);">Как к вам обращаться? (Поле ввода)</div>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Телефон или Telegram</label>
+                    <div style="border: 1px solid var(--border); padding: 1rem; color: var(--text-muted);">+7 (999) 000-00-00 или @username (Поле ввода)</div>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">С чем хотите поработать?</label>
+                    <div style="border: 1px solid var(--border); padding: 1rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                        <span>Тревога, паника, страхи (Выпадающий список)</span>
+                        <span>▼</span>
+                    </div>
+                </div>
+                <div class="wire-btn" style="width: 100%; margin: 0;">Кнопка: Оставить заявку</div>
+                <p style="font-size: 0.8rem; margin-top: 1rem; text-align: center;">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FOOTER -->
+    <footer style="background-color: var(--text-main); color: white; padding: 3rem 0;">
+        <div class="container flex-between">
+            <div>
+                <div style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">Татьяна Ильина</div>
+                <p style="color: var(--gray-mid); font-size: 0.9rem; margin-bottom: 0;">Психолог-консультант. ИНН: 000000000000</p>
+                <p style="color: var(--text-muted); font-size: 0.8rem; max-width: 400px; margin-top: 1rem;">Внимание: психологическое консультирование не является медицинской услугой. При наличии психиатрических диагнозов требуется консультация врача-психиатра.</p>
+            </div>
+            <div style="text-align: right;">
+                <p style="color: white; margin-bottom: 0.5rem; text-decoration: underline;">Написать на почту</p>
+                <p style="color: white; margin-bottom: 0.5rem; text-decoration: underline;">Политика конфиденциальности</p>
+                <p style="color: white; margin-bottom: 0.5rem; text-decoration: underline;">Согласие на обработку ПДн</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
