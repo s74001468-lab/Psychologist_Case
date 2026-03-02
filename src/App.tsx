@@ -309,7 +309,7 @@ export default function App() {
                 alt="Татьяна Ильина" 
                 className="object-cover w-full h-full"
                 onError={(e) => {
-                  e.currentTarget.src = "https://avatars.mds.yandex.net/get-neurolanding-generate/15283349/85liGvnbp8zM8bc-pPQ4rQ/orig";
+                  e.currentTarget.src = "https://avatars.mds.yandex.net/get-neurolanding-generate/14839663/tHrqcc1GnO3d1KpsN6sM2g/orig";
                 }}
                 referrerPolicy="no-referrer"
               />
